@@ -15,10 +15,10 @@ echo "Hugo compilation is complete."
 
 # Build a new Docker image
 echo "Starting docker image build..."
-docker image build -f push-update-Dockerfile --no-cache -t static-landing-update .
+docker image build -f push-update-Dockerfile --no-cache -t dgdocker3-landing-update .
 echo "...docker image build is complete."
 
 # Tag the new image and push it to Docker Hub
 docker login
-docker tag static-landing-update mcfatem/static-landing:latest
-docker push mcfatem/static-landing:latest
+docker tag dgdocker3-landing-update mcfatem/dgdocker3-landing:latest
+docker push mcfatem/dgdocker3-landing:latest
